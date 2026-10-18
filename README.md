@@ -1,5 +1,6 @@
 ﻿# STRENGTH-INTENT-NS-LEAN (v5.0.0-Omega)
-**Author:** Prince Upadhyay (eggaesharkk)  
+**Author:** Prince Upadhyay (
+reggaesharkk)  
 **License:** Proprietary Commercial Evaluation License (PCEL-2026)  
 
 ---
