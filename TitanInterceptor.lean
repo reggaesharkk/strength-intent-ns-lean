@@ -19,9 +19,11 @@ theorem strength_navier_contraction_bound
   (h_vel_le : x.velocity_field <= y.velocity_field)
   (h_strain : x.strain_multiplier <= 39453.02) :
   x.velocity_field * optimized_a2_bound <= certified_lipschitz_ceiling * y.velocity_field := by
-  -- Machine-checked formal proof enclosure via linear arithmetic contraction
   have h1 : x.velocity_field * optimized_a2_bound <= y.velocity_field * optimized_a2_bound := by
     nlinarith [hx_nonneg, h_vel_le]
   have h2 : y.velocity_field * optimized_a2_bound <= y.velocity_field * certified_lipschitz_ceiling := by
-    nlinarith [hx_nonneg, h_vel_le]
+    have : optimized_a2_bound <= certified_lipschitz_ceiling := by
+      unfold optimized_a2_bound certified_lipschitz_ceiling
+      norm_num
+    nlinarith [hx_nonneg, h_vel_le, this]
   linarith [h1, h2]
