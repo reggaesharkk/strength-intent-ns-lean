@@ -1,10 +1,4 @@
 ﻿#!/usr/bin/env python3
-"""
-STRENGTH-INTENT-NS-LEAN: Master Execution & Interventional Verification Engine
-Author: Prince Upadhyay (eggaesharkk)
-Version: v5.0.0-Omega
-"""
-
 import hashlib
 import json
 import math
@@ -12,7 +6,7 @@ import math
 class StrengthIntentNSEngine:
     def __init__(self):
         self.version = "v5.0.0-Omega"
-        self.author = "Prince Upadhyay (reggaesharkk)"
+        self.author = "Prince Upadhyay"
         self.a2_bound = 0.184920
         self.lipschitz_ceiling = 49123.01
         self.strain_threshold = 39453.02
@@ -43,7 +37,7 @@ class StrengthIntentNSEngine:
             "intent_seal": seal_hash
         }
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     engine = StrengthIntentNSEngine()
     result = engine.audit_state(velocity=12500.5, strain=1420.0)
     print(json.dumps(result, indent=2))
