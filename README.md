@@ -1,20 +1,22 @@
 # STRENGTH Framework: Branch B3 Multiscale Socket Interceptor
-**Author / Absolute Intellectual Owner:** Prince Upadhyay  
+**Author:** Prince Upadhyay  
 **Substrate Optimization:** Windows ARM64 (Qualcomm Snapdragon X Oryon)  
 **Classification:** Autonomous In-Memory Causal Intervention Firewall  
 
+I am developing this as a Windows ARM64 prototype. The notes below describe the design and checks recorded for this branch.
+
 ## 🔬 Core Technological Innovation
 
-The B3 Multiscale Socket Interceptor abandons traditional signature-based pattern matching in favor of **Behavioral Topology De-coupling**. Traditional network security systems hit an optimization ceiling known as *gradient update cancellation*—where joint tracking loops erase each other's parameters under high-noise thresholds. 
+I am testing an alternative to signature-based pattern matching that I call **Behavioral Topology De-coupling**. My working hypothesis is that joint tracking loops can interfere under noisy thresholds; the results here describe this prototype, not every network security system. 
 
-This enterprise utility solves the bottleneck structurally at the layer level by enforcing a block-diagonal partition over hidden recurrent spaces:
+In this prototype, I split the hidden recurrent spaces with a block-diagonal partition to test whether it reduces that interference:
 
 1. **Fast Timescale Group (16 Hidden Dimensions):** Absorbs volatile, high-variance non-linear input trajectories natively without accumulating deep temporal history.
 2. **Slow Timescale Group (16 Reservoir Dimensions):** Structurally locked to a bit-perfect Identity Matrix floor to protect long-horizon verification signals from exponential background decay.
 
 ### 🛡️ The Causal Intervention Engine
 
-The subsystem profiles active network streams completely in-memory using standard linear algebra loops to continuously recompute Jacobian-Vector product alignment scores. Upon triggering a conflict event (Adversarial Cosine < 0), the **H2 Hidden-State Reset Knockout Switch** forcefully overwrites active transient vectors to absolute zero mid-forward pass, instantly dropping adversarial prediction capability to a blind $50\%$ random coin-flip chance floor.
+I compute Jacobian-vector alignment scores in memory. When adversarial cosine falls below zero, my **H2 Hidden-State Reset Knockout Switch** sets the transient vectors to zero mid-forward pass. The $50\%$ figure is the modeled chance baseline for this prototype, not an independently validated security guarantee.
 
 ## 🚀 Technical Specifications & Verification Status
 
