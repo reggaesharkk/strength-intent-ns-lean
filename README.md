@@ -1,40 +1,45 @@
-<p align="center"><a href="https://github.com/reggaesharkk/Reggae-shark-universe-"><img src="https://raw.githubusercontent.com/reggaesharkk/Reggae-shark-universe-/main/assets/universe_bar.svg" alt="Reggae Shark Universe — public research map" width="100%" /></a></p>
+# STRENGTH B3 — research prototype
 
-<p align="center"><a href="https://github.com/reggaesharkk/Reggae-shark-universe-">Public research map</a> &nbsp;·&nbsp; <a href="https://github.com/reggaesharkk?tab=repositories">All public repositories</a> &nbsp;·&nbsp; <a href="https://orcid.org/0009-0002-1170-4487">ORCID</a></p>
+**Status:** experimental Python/NumPy and C++ code. This is not a deployable network firewall.
 
-> I keep each project’s evidence, scope, and open questions alongside the work.
+I use STRENGTH to explore multiscale recurrent state and intervention ideas. The public source supports a narrower description than the earlier repository page did. This README maps each claim to the code that is actually present and separates synthetic checks from model or security evidence.
 
----
+## Start with the implementation
 
-# STRENGTH Framework: Branch B3 Multiscale Socket Interceptor
-**Author:** Prince Upadhyay  
-**Substrate Optimization:** Windows ARM64 (Qualcomm Snapdragon X Oryon)  
-**Classification:** Autonomous In-Memory Causal Intervention Firewall  
+The main prototype is [`b3_temporal_bottleneck.py`](b3_temporal_bottleneck.py). It initializes a seeded 32-dimensional NumPy layer by default, splits its state into fast and slow blocks, and computes one caller-supplied forward step. The slow matrix starts as an identity matrix; the layer still applies `tanh`, input projection, and caller-provided `xi_t`. The file contains no training loop, trained checkpoint, packet capture, socket processing, or firewall integration.
 
-I am developing this as a Windows ARM64 prototype. The notes below describe the design and checks recorded for this branch.
+Other files:
 
-## 🔬 Core Technological Innovation
+- [`h4_leakage_guard.py`](h4_leakage_guard.py) shuffles 100 integer IDs by default and returns an 80/20 partition. It does not measure information gain, fit a model, detect feature leakage, or validate a real dataset.
+- [`test_pipeline_reproducibility.py`](test_pipeline_reproducibility.py) calculates synthetic fast/slow sequences and a synthetic block-coupling ratio. These toy values are not measurements from B3 training or network traffic.
+- [`strength_ns_engine.py`](strength_ns_engine.py) checks two configured scalar limits using Python binary64 arithmetic. Its SHA-256 output is an unkeyed integrity digest, not a signature, authentication token, or IntentSeal authorization.
+- [`master_pipeline_audit.py`](master_pipeline_audit.py) hashes a static JSON configuration. It does not run Lean, the B3 model, or a cryptographic signer.
+- [`b3_hardware_accelerator.cpp`](b3_hardware_accelerator.cpp) is a bounded-dimension C ABI implementation of the same toy forward pass. It is ordinary C++ code; the repository does not provide hardware/NPU execution evidence.
+- [`TitanInterceptor.lean`](TitanInterceptor.lean) proves two elementary inequalities under their stated assumptions. The Lean terms are not connected to the Python or C++ runtime.
 
-I am testing an alternative to signature-based pattern matching that I call **Behavioral Topology De-coupling**. My working hypothesis is that joint tracking loops can interfere under noisy thresholds; the results here describe this prototype, not every network security system. 
+## Current evidence boundary
 
-In this prototype, I split the hidden recurrent spaces with a block-diagonal partition to test whether it reduces that interference:
+The public source does not substantiate the previous claims of exact-zero gradient leakage, a `+59.9168%` H4 information-gain premium, an empirically validated 50% adversarial prediction floor, hardware validation, or a production firewall. The H2 and H4 examples in [SharkByte](https://github.com/reggaesharkk/SharkByte/tree/main/examples/research) are explicitly synthetic arithmetic and split-integrity demonstrations; they do not run this model.
 
-1. **Fast Timescale Group (16 Hidden Dimensions):** Absorbs volatile, high-variance non-linear input trajectories natively without accumulating deep temporal history.
-2. **Slow Timescale Group (16 Reservoir Dimensions):** Structurally locked to a bit-perfect Identity Matrix floor to protect long-horizon verification signals from exponential background decay.
+No trained weights, evaluated dataset, prospective holdout result, latency profile, or live network interception result is published in this repository. That statement is limited to the public source tree; private files are not evidence for public claims until their provenance and results are reviewed and reproducible.
 
-### 🛡️ The Causal Intervention Engine
+## Reproduce the toy check
 
-I compute Jacobian-vector alignment scores in memory. When adversarial cosine falls below zero, my **H2 Hidden-State Reset Knockout Switch** sets the transient vectors to zero mid-forward pass. The $50\%$ figure is the modeled chance baseline for this prototype, not an independently validated security guarantee.
+With Python and NumPy installed, run:
 
-## 🚀 Technical Specifications & Verification Status
+```bash
+python test_pipeline_reproducibility.py
+```
 
-* **Gradient Crossover Leakage:** 0.000000 (Bit-Perfect Architectural Moat)
-* **Execution Footprint:** Zero-Cost Stateless RAM Only (No local disk degradation)
-* **Dependency Matrix:** Pure Python/NumPy
-* **H4 Incremental Information Gain Premium:** +59.9168% Verified
-* **Workspace Status:** Authenticated, hardware-validated, and 100% clean of Git branch contamination.
+This only reruns the synthetic calculations described above. A passing assertion would confirm those toy relationships for that run; it would not validate B3, H2, H4, or a security claim.
 
-## ⚖️ Commercial Licensing Restrictions
+## Evidence gates for the next release
 
-Copyright © 2026 by Prince Upadhyay. All rights reserved. 
-This software module and its underlying multiscale block-diagonal parameters are proprietary assets. Unauthorized duplication, reverse engineering, or training replication without an explicit enterprise site license signed by Prince Upadhyay is strictly prohibited.
+1. Freeze a documented dataset, labels, split protocol, seeds, and baseline before evaluating H4.
+2. Implement the H2 intervention in the actual model and compare it against a no-intervention control.
+3. Publish the training code, parameter provenance, metrics, and an independently reproducible evaluation before describing the model as trained or effective.
+4. Measure ARM64 performance and review memory, pointer, and threat-model boundaries before discussing deployment.
+
+## Rights
+
+The repository's existing [`LICENSE.md`](LICENSE.md) governs use of this source. The historical `STRENGTH-INTENT-NS-LEAN-v5.0.0-Omega-Release.zip` is retained unchanged; it is not a substitute for the current source notes or evidence described here.
